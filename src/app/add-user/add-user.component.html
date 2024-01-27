@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="container col-lg-6">
+    <h1 class="text-center">Add New User</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group">
+            <div class="alert alert-warning" *ngIf='blogError'>{{queMessage}}</div>
+            <div class="alert alert-success" *ngIf='successError'>{{successMessage}}</div>
+          <div class="form-group">
+            <label for="email">User Name :</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="user.username" placeholder="Enter Username"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="user.password" id="password" placeholder="Enter password"
+              name="password">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="text" class="form-control" [(ngModel)]="user.email" id="email" placeholder="Enter email"
+              name="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Phone:</label>
+            <input type="text" class="form-control" [(ngModel)]="user.phone" id="phone" placeholder="Enter phone"
+              name="phone">
+          </div>
+          <button (click)=AddUser() class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

@@ -1,0 +1,31 @@
+<app-logout></app-logout>
+
+<div class="container mt-2 mb-2">
+    <div class="row">
+        <div class="col-1">
+            
+          </div>
+          <div class="col-10">
+            <div class="card">
+                <h5 class="card-header">{{admin.username}}</h5>
+                <div class="card-body">
+                  <h5 class="card-title">{{admin.role}}</h5>
+                  <p class="card-text">{{admin.email}}</p>
+                  <button class="btn  my-2 my-sm-0 bg-primary mr-2" *ngIf='authenticationService.isUserLoggedIn()'>
+                    <a style="text-decoration: none;" class="text-white" routerLink='/viewUser'
+                        id="">View All User</a>
+                 </button>
+        
+                 <button class="btn  my-2 my-sm-0 bg-primary" *ngIf='authenticationService.isUserLoggedIn()'>
+                    <a style="text-decoration: none;" class="text-white" routerLink='/addUser'  
+                        id="">Add New User</a>
+                 </button>
+                </div>
+              </div>
+          </div>
+          <div class="col-1">
+            
+          </div>
+    </div>
+  </div>
+<app-footer></app-footer>
